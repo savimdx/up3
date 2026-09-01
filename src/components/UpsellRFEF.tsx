@@ -20,6 +20,10 @@ import {
   TrendingUp,
   FileCheck
 } from 'lucide-react';
+import rfefHeroShowcaseImg from '../assets/images/rfef_hero_showcase.webp';
+import carlosMendozaImg from '../assets/images/carlos_mendoza.webp';
+import javierOrtegaImg from '../assets/images/javier_ortega.webp';
+import miguelGarridoImg from '../assets/images/miguel_garrido.webp';
 
 interface UpsellRFEFProps {
   onAccept: () => void;
@@ -40,20 +44,23 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
     return () => clearInterval(timer);
   }, []);
 
-  // Hotmart Sales Funnel Widget script initialization
+  // Hotmart Sales Funnel Widget setup
   useEffect(() => {
-    const initSalesFunnel = () => {
+    const mountSalesFunnel = () => {
+      const el = document.getElementById('hotmart-sales-funnel');
+      if (!el) return;
       if ((window as any).checkoutElements) {
         try {
+          el.innerHTML = '';
           (window as any).checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
         } catch (e) {
-          console.warn('Hotmart checkoutElements mount:', e);
+          console.warn('Hotmart checkoutElements mount error:', e);
         }
       }
     };
 
     if ((window as any).checkoutElements) {
-      initSalesFunnel();
+      mountSalesFunnel();
     } else {
       const scriptId = 'hotmart-checkout-elements-script';
       let script = document.getElementById(scriptId) as HTMLScriptElement | null;
@@ -63,11 +70,11 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
         script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
         script.async = true;
         script.onload = () => {
-          setTimeout(initSalesFunnel, 100);
+          mountSalesFunnel();
         };
         document.head.appendChild(script);
       } else {
-        script.addEventListener('load', () => setTimeout(initSalesFunnel, 100));
+        script.addEventListener('load', () => mountSalesFunnel());
       }
     }
   }, []);
@@ -228,7 +235,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           <div className="pt-2 flex flex-col items-center justify-center max-w-3xl mx-auto">
             <div className="relative group rounded-3xl bg-white p-2.5 sm:p-4 border-2 border-slate-200 shadow-xl transition-all duration-300 hover:border-red-400 w-full flex flex-col items-center justify-center overflow-hidden">
               <img 
-                src="https://i.ibb.co/s9bHr3YD/Chat-GPT-Image-29-de-ago-de-2026-22-12-41.png" 
+                src={rfefHeroShowcaseImg} 
                 alt="98 Ejercicios de Entrenamiento de Fútbol de la Selección Española" 
                 width={640}
                 height={512}
@@ -236,7 +243,12 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== 'https://i.ibb.co/s9bHr3YD/Chat-GPT-Image-29-de-ago-de-2026-22-12-41.png') {
+                    target.src = 'https://i.ibb.co/s9bHr3YD/Chat-GPT-Image-29-de-ago-de-2026-22-12-41.png';
+                  }
+                }}
               />
             </div>
           </div>
@@ -472,14 +484,19 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/mrNtKLvp/Nedjeljko-Josipovic.jpg" 
-                  alt="Nedjeljko-Josipovic" 
+                  src={carlosMendozaImg} 
+                  alt="Carlos M." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== 'https://i.ibb.co/mrNtKLvp/Nedjeljko-Josipovic.jpg') {
+                      target.src = 'https://i.ibb.co/mrNtKLvp/Nedjeljko-Josipovic.jpg';
+                    }
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Carlos M.</h5>
@@ -508,14 +525,19 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/tMRxZnpq/dickman-pre-season.webp" 
-                  alt="dickman-pre-season" 
+                  src={javierOrtegaImg} 
+                  alt="Javier O." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== 'https://i.ibb.co/tMRxZnpq/dickman-pre-season.webp') {
+                      target.src = 'https://i.ibb.co/tMRxZnpq/dickman-pre-season.webp';
+                    }
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Javier O.</h5>
@@ -544,14 +566,19 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/ynd9h7Kj/treinador-de-futebol-ensinando-seus-alunos-23-2149708026.avif" 
-                  alt="treinador-de-futebol-ensinando-seus-alunos-23-2149708026" 
+                  src={miguelGarridoImg} 
+                  alt="Miguel S." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== 'https://i.ibb.co/ynd9h7Kj/treinador-de-futebol-ensinando-seus-alunos-23-2149708026.avif') {
+                      target.src = 'https://i.ibb.co/ynd9h7Kj/treinador-de-futebol-ensinando-seus-alunos-23-2149708026.avif';
+                    }
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Miguel S.</h5>

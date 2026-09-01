@@ -4,7 +4,7 @@ import bonus2Img from './assets/images/bonus2.webp';
 import bonus3Img from './assets/images/bonus3.webp';
 import bonus4Img from './assets/images/bonus4.webp';
 import bonus5Img from './assets/images/bonus5.webp';
-import carlosMendozaImg from './assets/images/carlos_mendoza.jpg';
+import carlosMendozaImg from './assets/images/carlos_mendoza.webp';
 import javierOrtegaImg from './assets/images/javier_ortega.webp';
 import miguelGarridoImg from './assets/images/miguel_garrido.webp';
 

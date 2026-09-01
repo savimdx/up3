@@ -30,10 +30,6 @@
     <meta property="og:description" content="Descubre 98 ejercicios prácticos para crear entrenamientos más dinámicos, organizados y efectivos." />
 
     <!-- Speed up connections to essential external resources -->
-    <link rel="preconnect" href="https://i.ibb.co" crossorigin />
-    <link rel="dns-prefetch" href="https://i.ibb.co" />
-    <link rel="preconnect" href="https://i.imgur.com" crossorigin />
-    <link rel="dns-prefetch" href="https://i.imgur.com" />
     <link rel="preconnect" href="https://checkout.hotmart.com" />
     <link rel="dns-prefetch" href="https://checkout.hotmart.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,14 +38,17 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
 
-    <!-- Hotmart Checkout Elements Script -->
-    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <!-- Preload Critical Hero Image for instant LCP -->
+    <link rel="preload" as="image" href="/images/rfef_hero_showcase.webp" type="image/webp" fetchpriority="high" />
 
-    <!-- Non-blocking font request with display=swap for zero FCP blockage -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;950&family=JetBrains+Mono:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;950&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <!-- Hotmart Checkout Elements Script (Non-blocking) -->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js" async defer></script>
+
+    <!-- Optimized non-blocking font request -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;950&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" />
     </noscript>
 
     <script>
