@@ -71,7 +71,7 @@ export default function Bonuses() {
               <div className="mt-2 pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <span className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider">Valor original</span>
-                  <span className="text-xs font-extrabold text-red-600 line-through">MX$ {bonus.value}</span>
+                  <span className="text-xs font-extrabold text-red-600 line-through">{bonus.value} €</span>
                 </div>
                 <div className="text-right">
                   <span className="block text-[10px] text-emerald-600 font-bold uppercase tracking-wider font-extrabold">Hoy para ti</span>

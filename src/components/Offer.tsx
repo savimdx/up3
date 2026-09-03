@@ -105,7 +105,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 <div className="flex items-center justify-center gap-2.5 whitespace-nowrap flex-nowrap">
                   <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-400">
                     <span>Antes</span>
-                    <span className="font-extrabold text-red-500 line-through">MX$ 1.970,00</span>
+                    <span className="font-extrabold text-red-500 line-through">97,00 €</span>
                   </div>
                   <span className="text-[10px] sm:text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-md uppercase tracking-wider leading-none shrink-0">
                     90% Dto.
@@ -115,7 +115,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 {/* Main Price */}
                 <div className="flex items-center justify-center my-3 select-none overflow-visible whitespace-nowrap flex-nowrap gap-1 sm:gap-3">
                   <span className="text-[3.25rem] min-[360px]:text-[4.25rem] sm:text-[7.5rem] md:text-[9.5rem] lg:text-[11rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
-                    MX$147.32
+                    7,28 €
                   </span>
                 </div>
 
@@ -169,7 +169,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                   <span>¡OFERTA DE ÚLTIMA HORA!</span>
                 </span>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold tracking-tight leading-tight select-none">
-                  ¡Sube al Plan Premium por solo MX$ 50,00 más!
+                  ¡Sube al Plan Premium por solo 2,50 € más!
                 </h3>
               </div>
 
@@ -180,8 +180,8 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-4 text-center shadow-sm">
                   <div className="text-[10px] sm:text-xs font-extrabold text-orange-600 uppercase tracking-widest mb-1">OFERTA DE ACTUALIZACIÓN</div>
                   <div className="flex items-center justify-center gap-2 sm:gap-3">
-                    <span className="text-xs sm:text-sm font-semibold text-slate-400 line-through">Antes: MX$ 350,00</span>
-                    <span className="text-lg sm:text-2xl font-black text-orange-600">¡Tu Precio: MX$ 147.32!</span>
+                    <span className="text-xs sm:text-sm font-semibold text-slate-400 line-through">Antes: 15,00 €</span>
+                    <span className="text-lg sm:text-2xl font-black text-orange-600">¡Tu Precio: 7,28 €!</span>
                   </div>
                 </div>
 
@@ -225,7 +225,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                     className="w-full flex items-center justify-center space-x-2 px-4 py-4 sm:py-4.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 hover:brightness-110 active:scale-[0.98] transition-all text-white font-black text-xs sm:text-sm md:text-base tracking-wide uppercase shadow-lg cursor-pointer transform duration-150 animate-pulse"
                   >
                     <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                    <span>SÍ, ¡QUIERO EL PREMIUM POR MX$ 147.32!</span>
+                    <span>SÍ, ¡QUIERO EL PREMIUM POR 7,28 €!</span>
                   </button>
 
                   <button
@@ -235,7 +235,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                     }}
                     className="w-full py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-extrabold text-xs tracking-wide uppercase transition-colors cursor-pointer text-center"
                   >
-                    No, gracias. Continuar al Plan Básico (MX$ 97,00)
+                    No, gracias. Continuar al Plan Básico (5,00 €)
                   </button>
                 </div>
 
