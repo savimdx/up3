@@ -624,7 +624,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="flex flex-col items-center justify-center my-1 select-none whitespace-nowrap">
               <div className="flex items-center justify-center flex-nowrap gap-0.5 sm:gap-1">
                 <span className="text-[3.25rem] min-[360px]:text-[4.25rem] sm:text-[6.5rem] md:text-[7.5rem] font-black text-red-600 tracking-tighter leading-none shrink-0 drop-shadow-sm">
-                  US$6,90
+                  US$6.90
                 </span>
               </div>
               <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1 mb-2">
